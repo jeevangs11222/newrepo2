@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage("git"){
+        steps{
+            git 'https://github.com/jeevangs11222/newrepo2.git'
+             } 
+        }
+        stage("welcome"){
+                steps{
+            echo "welcome jeevan"
+           }
+        }
+    }
+}
