@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage("git"){
         steps{
-            git 'https://github.com/jeevangs11222/newrepo2.git'
+            git 'https://github.com/jeevangs11222/maven-helloworld.git'
              } 
         }
         stage("Maven Build"){
