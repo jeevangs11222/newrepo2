@@ -1,14 +1,18 @@
 pipeline{
     agent any
+    
+    environment {
+        PATH = "/root/maven/apache-maven-3.8.6/bin:$PATH"
+    }
     stages{
         stage("git"){
         steps{
             git 'https://github.com/jeevangs11222/newrepo2.git'
              } 
         }
-        stage("welcome"){
+        stage("Maven Build"){
                 steps{
-            echo "welcome jeevan"
+            sh "mvn clean package"
            }
         }
     }
